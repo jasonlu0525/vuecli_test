@@ -1,12 +1,17 @@
 <template>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <Card></Card>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+
+    <router-link class="text-danger" to="/about">About</router-link>
   </div>
-  <router-view/>
+  <router-view />
+  ??
 </template>
 
 <style lang="scss">
+@import '@/assets/all';
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -28,3 +33,13 @@
   }
 }
 </style>
+
+<script>
+import Card from '@/components/Card.vue';
+
+export default {
+  components: {
+    Card,
+  },
+};
+</script>
